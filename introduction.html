@@ -3,68 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Кіріспе</title>
+    <title>КІРІСПЕ</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
+        @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;600&display=swap');
+        
+        body, html {
             margin: 0;
             padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Mulish', sans-serif;
             background-color: #f4f4f4;
+            color: #333;
         }
-        header {
-            background-color: #008080;
+        .hero {
+            background: url('kirispe.jpg') no-repeat center center/cover;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
             color: white;
-            padding: 20px;
             font-size: 24px;
+            font-weight: bold;
+        }
+        .hero div {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
         }
         .content {
+            max-width: 900px;
             margin: 20px auto;
             padding: 20px;
-            max-width: 800px;
             background: white;
             border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: left;
         }
         nav {
-            background: #006666;
-            padding: 10px;
+            background: #008080;
+            padding: 15px;
+            text-align: center;
         }
         nav a {
             color: white;
             margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
+            font-size: 18px;
         }
     </style>
 </head>
 <body>
-    <header>Кіріспе</header>
+    <div class="hero">
+        <div>
+            <h1>КІРІСПЕ</h1>
+        </div>
+    </div>
     <nav>
         <a href="index.html">Басты бет</a>
     </nav>
     <div class="content">
-        <h2>КІРІСПЕ</h2>
-        <p><em>Дүрия далаға құт дариялар.<br>
-        «Маятас», «Құлжығылған», «Ханшабылған»<br>
+        <h2>Дүрия далаға құт дариялар</h2>
+        <p>«Маятас», «Құлжығылған», «Ханшабылған»<br>
         Аттары-ақ шежірені жариялар.<br>
         Ұлытау- қазақ жері жүрегіндей<br>
         Сарыторғай- жеке-дара сілеміндей,<br>
-        Қала ма сол өлкеде жыр өрілмей!</em><br>
-        <strong>Самат Асқаров</strong></p>
-        <p>Жалпы, көпшіліктің көкейінде «Екі Дің деген не? Ол қашан пайда болған? Қай жерде орналасқан?» деген сұрақ жүруі мүмкін. Оның жауабы мынау: Екідіңнің орналасқан жері – қазіргі Қостанай облысы, Арқалық ауданы...</p>
-        <h3>Зерттеу жұмысының өзектілігі</h3>
-        <p>Тарихы тұнған өлкемізді жоғалтып алмай ұрпақтан-ұрпаққа кележатқан мұрамызды жаңғыртып келер ұрпаққа жеткізу.</p>
-        <h3>Зерттеу мақсаты</h3>
-        <p>Екідің жерінің тарихы мен ескерткіштерін, топонимикалық атауларын көпшілікке танымал ету.</p>
-        <h3>Зерттеу міндеттері</h3>
-        <ul>
-            <li>Екідің атауының шығуы туралы зерттеу;</li>
-            <li>Екідің ауылының халқымен кездесіп тарихын тыңдау;</li>
-            <li>Осы жазылған жұмысты көпшілікке танымал ету арқылы, Екідің жерін елге танымал ету;</li>
-            <li>Екідің елінің тумасымен кездесіп өлең оқыту.</li>
-        </ul>
+        Қала ма сол өлкеде жыр өрілмей!<br>
+        Самат Асқаров</p>
+        
+        <p>Жалпы, көпшіліктің көкейінде «Екі Дің деген не? Ол қашан пайда болған? Қай жерде орналасқан?» деген сұрақ жүруі мүмкін...</p>
     </div>
 </body>
 </html>
