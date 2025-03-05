@@ -15,99 +15,28 @@
             color: #333;
             text-align: center;
         }
-        .toc {
-            background: #008080;
-            padding: 15px;
-            color: white;
-            font-weight: bold;
-        }
-        .toc a {
-            color: white;
-            margin: 0 10px;
-            text-decoration: none;
-        }
-        .school-name {
-            background: #004d4d;
-            color: white;
-            font-size: 18px;
-            font-weight: bold;
-            padding: 15px;
-        }
-        .hero {
-            background: url('auyl.jpg') no-repeat center center/cover;
-            width: 100%;
-            height: 60vh;
+        .navigation {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeIn 1.5s ease-out forwards;
-        }
-        .hero div {
-            background: rgba(0, 0, 0, 0.7);
+            justify-content: space-between;
+            max-width: 900px;
+            margin: 40px auto;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-        .hero h2, .hero p {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInText 1.5s ease-out forwards 0.5s;
-        }
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 1s ease-out, transform 1s ease-out;
-        }
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        @keyframes fadeInText {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        nav {
+        .nav-btn {
             background: #008080;
-            padding: 15px;
-        }
-        nav a {
             color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
             font-size: 18px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+        .nav-btn:hover {
+            background: #006666;
         }
     </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const fadeElements = document.querySelectorAll(".fade-in");
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("visible");
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.1 });
-            
-            fadeElements.forEach(element => {
-                observer.observe(element);
-            });
-        });
-    </script>
 </head>
 <body>
     <div class="toc">
@@ -118,7 +47,7 @@
         <a href="conclusion.html">ҚОРЫТЫНДЫ – Ел еркесі-Екідің елді мекен</a> |
         <a href="references.html">ПАЙДАЛАНЫЛҒАН ӘДЕБИЕТТЕР ТІЗІМІ</a>
     </div>
-    <div class="school-name fade-in">
+    <div class="school-name">
         Қостанай облысы әкімдігі білім басқармасының <br>
         «Қостанай ауданы білім бөлімінің мемлекеттік тілде оқытатын <br>
         №1 Заречный жалпы білім беретін мектебі» КММ
@@ -131,8 +60,42 @@
             <p><strong>Жетекшілері:</strong> Нұрмұханбет Назыкеш Бейбітқызы</p>
         </div>
     </div>
-    <nav>
-        <a href="index.html">Басты бет</a>
-    </nav>
+    
+    <div class="navigation">
+        <a href="introduction.html" class="nav-btn">Келесі →</a>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const pages = [
+                "introduction.html", 
+                "negizgi_bolim.html", 
+                "toponymy.html", 
+                "monuments.html", 
+                "conclusion.html", 
+                "references.html"
+            ];
+            
+            const currentPage = window.location.pathname.split("/").pop();
+            const currentIndex = pages.indexOf(currentPage);
+            const navContainer = document.querySelector(".navigation");
+            
+            if (currentIndex > 0) {
+                const backBtn = document.createElement("a");
+                backBtn.href = pages[currentIndex - 1];
+                backBtn.classList.add("nav-btn");
+                backBtn.textContent = "← Артқа";
+                navContainer.insertBefore(backBtn, navContainer.firstChild);
+            }
+            
+            if (currentIndex < pages.length - 1) {
+                const nextBtn = document.createElement("a");
+                nextBtn.href = pages[currentIndex + 1];
+                nextBtn.classList.add("nav-btn");
+                nextBtn.textContent = "Келесі →";
+                navContainer.appendChild(nextBtn);
+            }
+        });
+    </script>
 </body>
 </html>
