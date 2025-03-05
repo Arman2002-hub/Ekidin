@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="kk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой Аул</title>
+    <title>Екідің: Туған өлке – тұнған тарих</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -19,8 +19,9 @@
             font-size: 24px;
         }
         .content {
-            margin: 20px;
+            margin: 20px auto;
             padding: 20px;
+            max-width: 800px;
             background: white;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -29,13 +30,41 @@
             max-width: 100%;
             border-radius: 10px;
         }
+        nav {
+            background: #006666;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
-    <header>Добро пожаловать в мой аул</header>
-    <div class="content">
-        <p>Здесь вы найдете интересные истории и фотографии нашего аула.</p>
-        <img src="photo.jpg" alt="Фото аула">
+    <header>Екідің: Туған өлке – тұнған тарих</header>
+    <nav>
+        <a href="#about">Тарих</a>
+        <a href="#landmarks">Ескерткіштер</a>
+        <a href="#gallery">Галерея</a>
+        <a href="#contact">Байланыс</a>
+    </nav>
+    <div class="content" id="about">
+        <h2>Екідің туралы</h2>
+        <p>Екідің – Қостанай облысы, Арқалық ауданында орналасқан тарихи мекен...</p>
+    </div>
+    <div class="content" id="landmarks">
+        <h2>Тарихи ескерткіштер</h2>
+        <p>Екідің ауылында көптеген тарихи ескерткіштер бар, олардың бірі –...</p>
+    </div>
+    <div class="content" id="gallery">
+        <h2>Галерея</h2>
+        <img src="photo.jpg" alt="Екідің көрінісі">
+    </div>
+    <div class="content" id="contact">
+        <h2>Байланыс</h2>
+        <p>Бұл жобаны дайындаған: Зейнелғабиден Абылайхан Асқарұлы</p>
     </div>
 </body>
 </html>
