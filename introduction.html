@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>КІРІСПЕ</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap');
         
         body, html {
             margin: 0;
@@ -13,7 +13,6 @@
             width: 100%;
             height: 100%;
             font-family: 'Mulish', sans-serif;
-            background-color: #f4f4f4;
             color: white;
         }
         .hero {
@@ -27,21 +26,34 @@
             text-align: center;
             padding: 20px;
             box-sizing: border-box;
+            position: relative;
         }
-        .hero h1 {
-            font-size: 36px;
-            font-weight: bold;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 10px 20px;
-            border-radius: 10px;
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
         }
-        .hero p {
-            max-width: 800px;
-            background: rgba(0, 0, 0, 0.6);
+        .content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
             padding: 20px;
+            background: rgba(0, 0, 0, 0.6);
             border-radius: 10px;
-            font-size: 18px;
+        }
+        h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        p, ul {
+            font-size: 20px;
             line-height: 1.6;
+            font-weight: 400;
+            text-align: left;
         }
         nav {
             background: #008080;
@@ -59,15 +71,16 @@
 </head>
 <body>
     <div class="hero">
-        <h1>КІРІСПЕ</h1>
-        <p>Дүрия далаға құт дариялар.<br>
-        «Маятас», «Құлжығылған», «Ханшабылған»<br>
-        Аттары-ақ шежірені жариялар.<br>
-        Ұлытау- қазақ жері жүрегіндей<br>
-        Сарыторғай- жеке-дара сілеміндей,<br>
-        Қала ма сол өлкеде жыр өрілмей!<br>
-             Самат Асқаров
-        <br>
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>КІРІСПЕ</h1>
+            <p>Дүрия далаға құт дариялар.<br>
+            «Маятас», «Құлжығылған», «Ханшабылған»<br>
+            Аттары-ақ шежірені жариялар.<br>
+            Ұлытау- қазақ жері жүрегіндей<br>
+            Сарыторғай- жеке-дара сілеміндей,<br>
+            Қала ма сол өлкеде жыр өрілмей!<br>
+            Самат Асқаров</p>
         
         <p>ЖЖалпы, көпшіліктің көкейінде «Екі Дің деген не? Ол қашан пайда болған? Қай жерде орналасқан?» деген сұрақ жүруі мүмкін . Оның жауабы мынау: Екідіңнің орналасқан жері – қазіргі Қостанай облысы, Арқалық ауданы (бұрынғы Аманкелді ауданына қарасты болған), сол қос Дің тұрған Сарыторғай кеңшары, бертінде  Екі Дің ауылы аталды. Ауыл Ұлытау сілемдерінен бері тарататын Сарыторғай, Қараторғай өзендерінің құйылысында, ойпат жерде орналасқан. Солтүстік, Солтүстік – Шығыс, Батыстан келіп, жоғарыдан еңіске түскенде бір-ақ көрінеді. Жер кіндігі Қазақстанның ортасы болып есептелетін, хандар  сайланған әйгілі Ұлытауға жақын. Енді екі Дің туралы естіген, білгенімді айтайын, ол-мемлекеттің қарауындағы ықылым заманнан келе жатқан тарихи ескерткіш..</p>
         
