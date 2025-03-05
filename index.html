@@ -10,16 +10,14 @@
         body, html {
             margin: 0;
             padding: 0;
-            width: 100%;
-            height: 100%;
             font-family: 'Mulish', sans-serif;
             background-color: #f4f4f4;
             color: #333;
+            text-align: center;
         }
         .toc {
             background: #008080;
             padding: 15px;
-            text-align: center;
             color: white;
             font-weight: bold;
         }
@@ -29,34 +27,41 @@
             text-decoration: none;
         }
         .school-name {
-            text-align: center;
-            padding: 15px;
             background: #004d4d;
             color: white;
             font-size: 18px;
             font-weight: bold;
+            padding: 15px;
         }
         .hero {
             background: url('auyl.jpg') no-repeat center center/cover;
             width: 100%;
             height: 60vh;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white;
-            font-size: 24px;
-            font-weight: bold;
         }
         .hero div {
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.7);
             padding: 20px;
             border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .hero h2 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 20px;
+            margin: 5px 0;
         }
         nav {
             background: #008080;
             padding: 15px;
-            text-align: center;
         }
         nav a {
             color: white;
@@ -70,7 +75,7 @@
 <body>
     <div class="toc">
         <a href="introduction.html">КІРІСПЕ</a> |
-        <a href="negizgi_bolim.html">НЕГІЗГІ БӨЛІМ - Сарыторғай жерінің Екідің аталуы</a> |
+        <a href="negizgi_bolim.html">НЕГІЗГІ БӨЛІМ – Сарыторғай жерінің Екідің аталуы</a> |
         <a href="toponymy.html">Екідің елінің топонимикалық атаулары</a> |
         <a href="monuments.html">Екідің ескерткіштері</a> |
         <a href="conclusion.html">ҚОРЫТЫНДЫ – Ел еркесі-Екідің елді мекен</a> |
@@ -84,7 +89,7 @@
     <div class="hero">
         <div>
             <h2>Тақырыбы: «Екідің кеше, бүгін, ертең»</h2>
-            <p>Қазақстанның жеті кереметі» номинациясы</p>
+            <p><strong>Қазақстанның жеті кереметі» номинациясы</strong></p>
             <p><strong>Орындаған:</strong> Зейнелғабиден Абылайхан Асқарұлы</p>
             <p><strong>Жетекшілері:</strong> Нұрмұханбет Назыкеш Бейбітқызы</p>
         </div>
